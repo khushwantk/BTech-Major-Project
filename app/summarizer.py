@@ -1,11 +1,14 @@
 import streamlit as st
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 import tf
 import feature
 import lsa
 import bert
 import textrank
 import tfidf
-import nltk
+
 # import requests
 
 st.title('Extractive Text Summarization')
