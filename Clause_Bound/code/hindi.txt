@@ -1,0 +1,115 @@
+Sentence :  यह वही लड़का है जिसने कल चोरी की थी ।
+
+ POS Tags:  [('यह', 'PRON'), ('वही', 'DET'), ('लड़का', 'NOUN'), ('है', 'AUX'), ('जिसने', 'PRON'), ('कल', 'NOUN'), ('चोरी', 'NOUN'), ('की', 'VERB'), ('थी', 'AUX'), ('।', 'PUNCT')]
+
+ Parse Tree :  (TOP(S(NP (NP (PRON यह)) (NP (DET वही) (NOUN लड़का)))(VP(AUX है)(SBAR(WHNP (PRON जिसने))(NP(NP (NOUN कल) (NOUN चोरी))(VP (VERB की) (AUX थी) (VP (PUNCT ।))))))))
+
+ -----------------Parented Tree----------------- 
+ (TOP
+  (S
+    (NP (NP (PRON यह)) (NP (DET वही) (NOUN लड़का)))
+    (VP
+      (AUX है)
+      (SBAR
+        (WHNP (PRON जिसने))
+        (NP
+          (NP (NOUN कल) (NOUN चोरी))
+          (VP (VERB की) (AUX थी) (VP (PUNCT ।))))))))
+
+ ------------------------------------------------ 
+
+              TOP                                        
+               |                                          
+               S                                         
+       ________|_________                                 
+      |                  VP                              
+      |              ____|_____________                   
+      |             |                 SBAR               
+      |             |     _____________|____              
+      |             |    |                  NP           
+      |             |    |          ________|____         
+      NP            |    |         |             VP      
+  ____|___          |    |         |         ____|____    
+ NP       NP        |   WHNP       NP       |    |    VP 
+ |     ___|____     |    |     ____|___     |    |    |   
+PRON DET      NOUN AUX  PRON NOUN     NOUN VERB AUX PUNCT
+ |    |        |    |    |    |        |    |    |    |   
+ यह  वही     लड़का  है जिसने  कल      चोरी  की   थी   ।  
+
+Number of Subtrees possible :  22
+Number of Accepted Subtrees:  2
+
+--------Accepted Subtree  1 ----------
+
+
+ Leaf Nodes :  ['जिसने', 'कल', 'चोरी', 'की', 'थी', '।']
+               SBAR               
+   _____________|____              
+  |                  NP           
+  |          ________|____         
+  |         |             VP      
+  |         |         ____|____    
+ WHNP       NP       |    |    VP 
+  |     ____|___     |    |    |   
+ PRON NOUN     NOUN VERB AUX PUNCT
+  |    |        |    |    |    |   
+जिसने  कल      चोरी  की   थी   ।  
+
+
+Verb Phrases :  ['की थी ।']
+Positions of VerbPhrase and Subordinationg Conjunctions :  ([(1, 1)], [])
+ Deleting Verb Phrase :   ['की', 'थी', '।']
+
+ Tree Left After Deletion: 
+      SBAR         
+   ____|____        
+  |         NP     
+  |         |       
+ WHNP       NP     
+  |     ____|___    
+ PRON NOUN     NOUN
+  |    |        |   
+जिसने  कल      चोरी
+
+
+ Subject Phrase :  जिसने कल चोरी
+
+--------Accepted Subtree  1  End----------
+
+
+--------Accepted Subtree  2 ----------
+
+
+ Leaf Nodes :  ['यह', 'वही', 'लड़का', 'है']
+          S           
+       ___|_________   
+      NP            | 
+  ____|___          |  
+ NP       NP        VP
+ |     ___|____     |  
+PRON DET      NOUN AUX
+ |    |        |    |  
+ यह  वही     लड़का  है
+
+
+Verb Phrases :  ['है']
+Positions of VerbPhrase and Subordinationg Conjunctions :  ([(1,)], [])
+ Deleting Verb Phrase :   ['है']
+
+ Tree Left After Deletion: 
+      S           
+      |            
+      NP          
+  ____|___         
+ NP       NP      
+ |     ___|____    
+PRON DET      NOUN
+ |    |        |   
+ यह  वही     लड़का
+
+
+ Subject Phrase :  यह वही लड़का
+
+--------Accepted Subtree  2  End----------
+
+Clauses :  ['जिसने कल चोरी की थी ।', 'यह वही लड़का है']

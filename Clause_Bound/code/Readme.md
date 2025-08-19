@@ -1,0 +1,2 @@
+- Input to clause.py must be the Parse tree structure of Hindi/English Sentence.
+- Output will be saved in hindi.txt file

@@ -1,0 +1,91 @@
+Sentence :  Though he was very rich , he was still very unhappy
+
+ POS Tags:  [('Though', 'SCONJ'), ('he', 'PRON'), ('was', 'AUX'), ('very', 'ADV'), ('rich', 'ADJ'), (',', 'PUNCT'), ('he', 'PRON'), ('was', 'AUX'), ('still', 'ADV'), ('very', 'ADV'), ('unhappy', 'ADJ')]
+
+ Parse Tree :  (TOP(S(SBAR(SCONJ Though)(S(NP (PRON he))(VP (AUX was) (ADJP (ADV very) (ADJ rich)))))(PUNCT ,)(NP (PRON he))(VP (AUX was)(ADVP (ADV still))(ADJP (ADV very) (ADJ unhappy)))))
+
+ -----------------Parented Tree----------------- 
+ (TOP
+  (S
+    (SBAR
+      (SCONJ Though)
+      (S (NP (PRON he)) (VP (AUX was) (ADJP (ADV very) (ADJ rich)))))
+    (PUNCT ,)
+    (NP (PRON he))
+    (VP (AUX was) (ADVP (ADV still)) (ADJP (ADV very) (ADJ unhappy)))))
+
+ ------------------------------------------------ 
+
+
+ ----------------Constituency Parse Tree------------------- 
+
+                                     TOP                                  
+                                      |                                    
+                                      S                                   
+              ________________________|______________                      
+            SBAR                      |    |         |                    
+   __________|____                    |    |         |                     
+  |               S                   |    |         |                    
+  |      _________|___                |    |         |                     
+  |     |             VP              |    |         VP                   
+  |     |     ________|____           |    |     ____|_________            
+  |     NP   |            ADJP        |    NP   |   ADVP      ADJP        
+  |     |    |         ____|____      |    |    |    |     ____|______     
+SCONJ  PRON AUX      ADV       ADJ  PUNCT PRON AUX  ADV  ADV         ADJ  
+  |     |    |        |         |     |    |    |    |    |           |    
+Though  he  was      very      rich   ,    he  was still very      unhappy
+
+
+ ----------------------------------------------------------- 
+
+Number of Subtrees possible :  22
+Number of Accepted Subtrees:  1
+
+--------Accepted Subtree  1 ----------
+
+
+ Leaf Nodes :  ['Though', 'he', 'was', 'very', 'rich', ',', 'he', 'was', 'still', 'very', 'unhappy']
+                                      S                                   
+              ________________________|______________                      
+            SBAR                      |    |         |                    
+   __________|____                    |    |         |                     
+  |               S                   |    |         |                    
+  |      _________|___                |    |         |                     
+  |     |             VP              |    |         VP                   
+  |     |     ________|____           |    |     ____|_________            
+  |     NP   |            ADJP        |    NP   |   ADVP      ADJP        
+  |     |    |         ____|____      |    |    |    |     ____|______     
+SCONJ  PRON AUX      ADV       ADJ  PUNCT PRON AUX  ADV  ADV         ADJ  
+  |     |    |        |         |     |    |    |    |    |           |    
+Though  he  was      very      rich   ,    he  was still very      unhappy
+
+
+Verb Phrases in Subtree  1  :  ['was very rich', 'was still very unhappy']
+Positions of VerbPhrase and Subordinationg Conjunctions :  ([(0, 1, 1)], [(0, 0), (1,), (2,), (3,)])
+ Deleting Verb Phrase :   ['was', 'very', 'rich']
+ Deleting Sub. Ordinating Conj Phrase :  ['was', 'still', 'very', 'unhappy']
+ Deleting Sub. Ordinating Conj Phrase :  ['he']
+ Deleting Sub. Ordinating Conj Phrase :  [',']
+ Deleting Sub. Ordinating Conj Phrase :  ['Though']
+
+ Tree Left After Deletion: 
+ S  
+ |   
+SBAR
+ |   
+ S  
+ |   
+ NP 
+ |   
+PRON
+ |   
+ he 
+
+
+ Subject Phrase :  he
+
+--------Accepted Subtree  1  End----------
+
+16
+25
+Clauses :  ['he was very rich', 'he was still very unhappy']
